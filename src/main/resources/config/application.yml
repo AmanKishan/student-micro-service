@@ -1,0 +1,27 @@
+server:
+  port: 8081
+  
+eureka:
+  instance:
+    lease-renewal-interval-in-seonds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+spring:
+  application:
+    name: student-microservice
+
+management:
+  security:
+    enabled: false
+
+logging:
+  level:
+    com.dummy.studentmicroservice: DEBUG       
+                    
